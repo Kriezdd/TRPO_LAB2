@@ -2,6 +2,7 @@ import {useState} from 'react'
 import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
+import Form from "@/components/Form.tsx";
 
 /******************************************
  * Компонент App
@@ -105,6 +106,16 @@ function App() {
           <p>
           Пустой проект для лабораторной по ТРПО
           </p>
+          <Form
+              showNextRoute={handleClickIncrement}
+              showCurrentRoute={handleClickDecrement}
+              showPreviousRoute={handleClickDecrement}
+              showWayHome={handleClickDecrement}
+              currentRound={count}
+              isDayFinished={false}
+              isFinalRound={false}
+              loading={false}
+          />
         </div>
       </>
   )
