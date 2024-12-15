@@ -41,6 +41,12 @@ jobs:
           cache: 'npm'
       - run: npm ci
       - run: npm run generate-docs
+      - run: ls -R ./docs
+      - name: Upload docs as artifact
+        uses: actions/upload-artifact@v3
+        with:
+          name: docs
+          path: ./docs
 
   deploy-docs:
     needs: docs
@@ -48,6 +54,12 @@ jobs:
 
     steps:
       - uses: actions/checkout@v4
+      - name: Download docs artifact
+        uses: actions/download-artifact@v3
+        with:
+          name: docs
+          path: ./docs
+      - run: ls -R ./docs
       - name: Deploy documentation to GitHub Pages
         uses: peaceiris/actions-gh-pages@v4
         with:
