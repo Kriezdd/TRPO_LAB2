@@ -3,23 +3,70 @@ import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
 
+/******************************************
+ * Компонент App
+ *
+ * Это основной компонент приложения, содержащий два модуля:
+ * - Калькулятор: складывает два числа, введённые пользователем.
+ * - Счётчик: увеличивает и уменьшает значение на 1.
+ *
+ * @component
+ ******************************************/
 function App() {
+  /**
+   * Первое число для калькулятора
+   * @type {number}
+   */
   const [firstNum, setFirstNum] = useState(0)
+
+  /**
+   * Второе число для калькулятора
+   * @type {number}
+   */
   const [secondNum, setSecondNum] = useState(0)
+
+  /**
+   * Результат суммы двух чисел
+   * @type {number}
+   */
   const [sum, setSum] = useState(0)
+
+  /**
+   * Значение счётчика
+   * @type {number}
+   */
   const [count, setCount] = useState(0)
 
+  /**
+   * Обработчик нажатия на кнопку сложения
+   * Складывает два числа из полей ввода и сохраняет результат в состоянии.
+   *
+   * @function
+   */
   const handleClickSum = () => {
     setSum(firstNum + secondNum)
   }
 
+  /**
+   * Обработчик нажатия на кнопку увеличения счётчика
+   * Увеличивает текущее значение счётчика на 1.
+   *
+   * @function
+   */
   const handleClickIncrement = () => {
     setCount(count + 1)
   }
 
+  /**
+   * Обработчик нажатия на кнопку уменьшения счётчика
+   * Уменьшает текущее значение счётчика на 1.
+   *
+   * @function
+   */
   const handleClickDecrement = () => {
     setCount(count - 1)
   }
+
 
   return (
       <>

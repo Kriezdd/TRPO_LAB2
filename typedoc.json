@@ -1,0 +1,10 @@
+{
+  "entryPoints": ["src/**/*.ts", "src/**/*.tsx"],
+  "out": "docs",
+  "exclude": ["**/*.test.ts", "**/*.test.tsx", "src/tests/**/*.ts", "src/tests/**/*.tsx", "src/vite-env.d.ts"],
+  "includeVersion": true,
+  "excludeExternals": true,
+  "excludePrivate": true,
+  "excludeProtected": true,
+  "readme": "none"
+}
