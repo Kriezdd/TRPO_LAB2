@@ -15,6 +15,10 @@
     "noEmit": true,
     "jsx": "react-jsx",
 
+    "compilerOptions": {
+      "types": ["vitest/globals", "@testing-library/jest-dom"]
+    },
+
     /* Linting */
     "strict": true,
     "noUnusedLocals": true,
@@ -22,5 +26,8 @@
     "noFallthroughCasesInSwitch": true,
     "noUncheckedSideEffectImports": true
   },
-  "include": ["src"]
+  "include": [
+    "src",
+    "node_modules/vitest/globals.d.ts"
+  ]
 }
