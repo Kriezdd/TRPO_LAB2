@@ -1,4 +1,7 @@
-import { SelectItem } from "@/types";
+export type SelectItem = {
+  value: string;
+  label: string;
+}
 
 export const startLocation = [25.229762, 55.289311];
 
