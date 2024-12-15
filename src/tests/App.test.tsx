@@ -1,6 +1,6 @@
 import "@vitest/browser/matchers.d.ts";
 import "@testing-library/jest-dom/matchers"
-import { render, screen } from '@testing-library/react'
+import { render } from '@testing-library/react'
 import App from '../App'
 import {expect} from "vitest";
 

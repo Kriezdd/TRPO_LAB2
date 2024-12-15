@@ -15,9 +15,9 @@
     "noEmit": true,
     "jsx": "react-jsx",
 
-    "compilerOptions": {
-      "types": ["vitest/globals", "@testing-library/jest-dom"]
-    },
+
+      "types": ["vitest/globals", "@testing-library/jest-dom"],
+
 
     /* Linting */
     "strict": true,
